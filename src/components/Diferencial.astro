@@ -1,0 +1,151 @@
+---
+---
+<section class="dif" id="diferencial">
+  <div class="dif-wrap">
+
+    <div class="dif-left">
+      <span class="section-label">Por qué elegirme</span>
+      <h2 class="section-title">
+        Esto no es una dieta.<br /><em>Es un cambio de vida.</em>
+      </h2>
+      <p class="dif-intro section-sub">
+        Hay miles de planes en internet. Lo que no encontrarás en ningún lado es a alguien
+        que te acompañe de verdad — con mensajes, ajustes semanales y la motivación que necesitas.
+      </p>
+
+      <ul class="dif-list">
+        <li>
+          <div class="dif-check">✓</div>
+          <div>
+            <strong>Nutrición + Fitness + Coaching en un solo lugar</strong>
+            <p>No necesitas buscar tres profesionales. Todo lo que necesitas para transformarte está aquí.</p>
+          </div>
+        </li>
+        <li>
+          <div class="dif-check">✓</div>
+          <div>
+            <strong>Acompañamiento real, no un plan y adiós</strong>
+            <p>Cuando flaqueas, cuando tienes dudas, cuando necesitas ajustes — ahí estoy.</p>
+          </div>
+        </li>
+        <li>
+          <div class="dif-check">✓</div>
+          <div>
+            <strong>Planes hechos para tu vida real</strong>
+            <p>Con tus tiempos, presupuesto y gustos. Sin alimentos raros ni rutinas imposibles.</p>
+          </div>
+        </li>
+        <li>
+          <div class="dif-check">✓</div>
+          <div>
+            <strong>Especializada en el cuerpo femenino</strong>
+            <p>Entiendo los ciclos hormonales y el metabolismo femenino para trabajar con tu cuerpo.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="dif-right">
+      <div class="dif-promise-card">
+        <div class="dif-card-head">
+          <img src="/logo.png" alt="Fitness For Women" class="dif-card-logo" />
+        </div>
+        <div class="dif-card-body">
+          <h3>Mi promesa para ti</h3>
+          <blockquote>
+            "No vas a pasar hambre, no vas a entrenar hasta el agotamiento
+            y no te voy a dejar sola. Mi trabajo es darte las herramientas
+            <em>y el acompañamiento</em> para que logres lo que llevas tiempo buscando."
+          </blockquote>
+          <footer class="dif-firma">
+            <span class="firma-name">— Camila Aguayo</span>
+            <span class="firma-role">Nutricionista &amp; Coach Fitness</span>
+          </footer>
+        </div>
+      </div>
+
+      <div class="dif-stats">
+        <div class="dif-stat">
+          <strong>+150</strong>
+          <span>Mujeres</span>
+        </div>
+        <div class="dif-stat">
+          <strong>100%</strong>
+          <span>Personalizado</span>
+        </div>
+        <div class="dif-stat">
+          <strong>24/7</strong>
+          <span>Soporte</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .dif { background: var(--color-beige); padding: 96px 28px; }
+  .dif-wrap {
+    max-width: 1100px; margin: 0 auto;
+    display: grid; grid-template-columns: 1.1fr 0.9fr;
+    gap: 64px; align-items: start;
+  }
+  .dif-intro { margin-bottom: 32px; }
+  .dif-list { list-style: none; display: flex; flex-direction: column; gap: 20px; }
+  .dif-list li { display: flex; gap: 16px; align-items: flex-start; }
+  .dif-check {
+    flex-shrink: 0; width: 26px; height: 26px;
+    background: var(--color-orange); color: #fff;
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    font-size: 0.7rem; font-weight: 700; margin-top: 2px;
+  }
+  .dif-list li strong {
+    display: block; font-size: 0.9rem; color: var(--color-ink-deep); margin-bottom: 5px;
+  }
+  .dif-list li p { font-size: 0.85rem; color: var(--color-brown-light); line-height: 1.65; }
+
+  .dif-promise-card {
+    background: #fff; border-radius: 28px; overflow: hidden;
+    border: 1px solid var(--color-beige-border);
+    box-shadow: 0 10px 32px rgba(92,61,42,0.08);
+    margin-bottom: 16px;
+  }
+  .dif-card-head {
+    background: linear-gradient(135deg, #FFF0E8, #FDE8D8);
+    padding: 28px; display: flex; justify-content: center;
+  }
+  .dif-card-logo { width: 150px; }
+  .dif-card-body { padding: 26px 28px; }
+  .dif-card-body h3 { font-size: 1rem; color: var(--color-ink-deep); margin-bottom: 14px; }
+  .dif-card-body blockquote {
+    font-size: 0.875rem; color: var(--color-brown-light);
+    line-height: 1.75; font-style: italic; margin-bottom: 20px;
+    border-left: 3px solid var(--color-orange-light);
+    padding-left: 14px;
+  }
+  .dif-card-body blockquote em { color: var(--color-orange); font-style: normal; font-weight: 600; }
+  .dif-firma {
+    padding-top: 16px; border-top: 1px solid var(--color-beige-dark);
+    display: flex; flex-direction: column; gap: 2px;
+  }
+  .firma-name { font-weight: 700; font-size: 0.875rem; color: var(--color-ink-deep); }
+  .firma-role { font-size: 0.78rem; color: var(--color-orange); }
+
+  .dif-stats {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;
+  }
+  .dif-stat {
+    background: #fff; border-radius: 16px; padding: 18px 12px;
+    text-align: center; border: 1px solid var(--color-beige-border);
+    display: flex; flex-direction: column; gap: 4px;
+  }
+  .dif-stat strong {
+    font-family: var(--font-serif); font-size: 1.4rem;
+    font-weight: 700; color: var(--color-orange);
+  }
+  .dif-stat span { font-size: 0.72rem; color: var(--color-brown-light); font-weight: 500; }
+
+  @media (max-width: 900px) {
+    .dif-wrap { grid-template-columns: 1fr; gap: 48px; }
+  }
+</style>

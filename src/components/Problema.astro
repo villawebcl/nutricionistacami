@@ -1,0 +1,111 @@
+---
+---
+<section class="prob" id="problema">
+  <div class="prob-wrap">
+
+    <div class="prob-header">
+      <span class="section-label" style="color: var(--color-orange-light)">¿Te suena familiar?</span>
+      <h2 class="section-title" style="color: var(--color-beige)">
+        Estás cansada de<br /><em>intentarlo sola.</em>
+      </h2>
+      <p class="section-sub" style="color: rgba(250,246,241,0.6); max-width:520px; margin: 0 auto;">
+        No es falta de fuerza de voluntad. Es que nadie te ha dado el acompañamiento real que necesitas.
+      </p>
+    </div>
+
+    <div class="prob-grid">
+      <div class="prob-item">
+        <span class="prob-icon">😩</span>
+        <p>Has probado mil dietas y siempre terminas igual — o peor que antes</p>
+      </div>
+      <div class="prob-item">
+        <span class="prob-icon">🏃‍♀️</span>
+        <p>Entrenas duro pero el cuerpo no responde como esperabas</p>
+      </div>
+      <div class="prob-item">
+        <span class="prob-icon">🥗</span>
+        <p>No sabes qué comer sin sentir que te estás castigando</p>
+      </div>
+      <div class="prob-item">
+        <span class="prob-icon">😔</span>
+        <p>Te miras al espejo y sientes que no avanzas, aunque lo intentas</p>
+      </div>
+      <div class="prob-item">
+        <span class="prob-icon">💬</span>
+        <p>Buscas orientación pero solo encuentras información genérica</p>
+      </div>
+      <div class="prob-item">
+        <span class="prob-icon">⏳</span>
+        <p>El tiempo pasa y sientes que perdiste otra oportunidad</p>
+      </div>
+    </div>
+
+    <div class="prob-answer">
+      <p class="answer-line">
+        No es tu culpa. El problema no eres tú —<br />
+        es que nadie te ha dado <strong>un plan para tu cuerpo real.</strong>
+      </p>
+      <p class="answer-cami">Eso es exactamente lo que yo hago.</p>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .prob {
+    background: var(--color-ink-deep);
+    padding: 96px 28px;
+    position: relative; overflow: hidden;
+  }
+  .prob::before {
+    content: '';
+    position: absolute; top: -240px; right: -180px;
+    width: 560px; height: 560px;
+    background: radial-gradient(circle, rgba(232,112,58,0.10) 0%, transparent 65%);
+    pointer-events: none;
+  }
+  .prob-wrap { max-width: 1100px; margin: 0 auto; position: relative; z-index: 1; }
+  .prob-header { text-align: center; margin-bottom: 60px; }
+
+  .prob-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 16px; margin-bottom: 64px;
+  }
+  .prob-item {
+    display: flex; align-items: flex-start; gap: 14px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 20px; padding: 26px 22px;
+    transition: background 0.2s, border-color 0.2s;
+  }
+  .prob-item:hover {
+    background: rgba(232,112,58,0.07);
+    border-color: rgba(232,112,58,0.18);
+  }
+  .prob-icon { font-size: 1.5rem; flex-shrink: 0; margin-top: 2px; }
+  .prob-item p { color: rgba(250,246,241,0.75); font-size: 0.9rem; line-height: 1.65; }
+
+  .prob-answer {
+    max-width: 620px; margin: 0 auto; text-align: center;
+    background: rgba(232,112,58,0.10);
+    border: 1px solid rgba(232,112,58,0.22);
+    border-radius: 24px; padding: 40px 44px;
+  }
+  .answer-line {
+    font-size: 1.1rem; color: var(--color-beige);
+    line-height: 1.7; margin-bottom: 14px;
+  }
+  .answer-line strong { color: var(--color-orange-light); font-weight: 600; }
+  .answer-cami {
+    font-family: var(--font-serif); font-style: italic;
+    font-size: 1.1rem; color: var(--color-orange-light);
+  }
+
+  @media (max-width: 768px) {
+    .prob-grid { grid-template-columns: 1fr; }
+    .prob-answer { padding: 28px 22px; }
+  }
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .prob-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>

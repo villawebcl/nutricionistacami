@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand palette */
+  --color-cream:        #FDF9F4;
+  --color-beige:        #FAF6F1;
+  --color-beige-dark:   #F0E8DC;
+  --color-beige-border: #E8D5C0;
+  --color-muted:        #C4A882;
+  --color-brown-light:  #B8906E;
+  --color-brown:        #8B6347;
+  --color-brown-dark:   #5C3D2A;
+  --color-ink:          #3D2B1F;
+  --color-ink-deep:     #2A1A0E;
+
+  --color-orange:       #E8703A;
+  --color-orange-dark:  #C95C28;
+  --color-orange-light: #F5956A;
+  --color-orange-glow:  rgba(232, 112, 58, 0.18);
+
+  /* Fonts */
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans:  "Inter", system-ui, sans-serif;
+}
+
+/* Reset & base */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  line-height: 1.15;
+  color: var(--color-ink-deep);
+}
+a { text-decoration: none !important; color: inherit; }
+img { max-width: 100%; display: block; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--color-beige); }
+::-webkit-scrollbar-thumb { background: var(--color-orange-light); border-radius: 99px; }
+
+/* Reusable helpers */
+.section-label {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-orange);
+  margin-bottom: 14px;
+}
+.section-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  color: var(--color-ink-deep);
+  line-height: 1.15;
+  margin-bottom: 18px;
+}
+.section-title em { color: var(--color-orange); font-style: italic; }
+.section-sub {
+  font-size: 1rem;
+  color: var(--color-brown-light);
+  line-height: 1.75;
+}
+.btn-orange {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--color-orange);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 14px 32px;
+  border-radius: 999px;
+  transition: background 0.2s, transform 0.15s;
+  text-decoration: none !important;
+}
+.btn-orange:hover { background: var(--color-orange-dark); transform: translateY(-2px); }
+.btn-whatsapp-green {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: #25D366;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 16px 40px;
+  border-radius: 999px;
+  transition: background 0.2s, transform 0.15s;
+}
+.btn-whatsapp-green:hover { background: #1ebe5a; transform: translateY(-2px); }

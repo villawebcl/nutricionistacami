@@ -1,0 +1,144 @@
+---
+const items = [
+  {
+    name: "Valentina M.", age: "28 años", city: "Santiago", initial: "V", color: "#E8703A",
+    text: "Llevaba 3 años intentando bajar de peso sin resultados. Con Cami en 2 meses bajé 6 kilos, pero sobre todo aprendí a comer rico y sin culpa.",
+    result: "−6 kg en 2 meses"
+  },
+  {
+    name: "Camila R.", age: "34 años", city: "Rancagua", initial: "C", color: "#B8906E",
+    text: "Lo que más me sorprendió fue el acompañamiento. Cualquier duda que tenía, Cami siempre estaba disponible. No me sentí sola en ningún momento.",
+    result: "Ganó masa muscular"
+  },
+  {
+    name: "Francisca T.", age: "41 años", city: "Santo Domingo", initial: "F", color: "#C95C28",
+    text: "Pensé que a mi edad era imposible volver a sentirme bien con mi cuerpo. Cami me demostró que estaba equivocada.",
+    result: "Transformación total"
+  },
+  {
+    name: "Isidora P.", age: "25 años", city: "San Antonio", initial: "I", color: "#8B6347",
+    text: "Soy mamá de dos y no tenía tiempo. Cami diseñó rutinas de 40 min en casa. Ahora tengo más energía que nunca y perdí 4 kilos.",
+    result: "−4 kg siendo mamá"
+  },
+  {
+    name: "Daniela V.", age: "30 años", city: "Melipilla", initial: "D", color: "#E8703A",
+    text: "Cami no me juzgó, me educó. Aprendí de nutrición de manera simple y práctica. El programa cambió mi relación con la comida.",
+    result: "Cambio de hábitos"
+  },
+  {
+    name: "Andrea S.", age: "38 años", city: "Casablanca", initial: "A", color: "#B8906E",
+    text: "Invertí en varios programas antes y siempre me abandonaban. Con Cami es totalmente diferente. Vale cada peso — y los resultados lo prueban.",
+    result: "−8 kg en 3 meses"
+  }
+];
+---
+<section class="test-sec" id="testimonios">
+  <div class="test-wrap">
+
+    <div class="test-header">
+      <span class="section-label">Resultados reales</span>
+      <h2 class="section-title">
+        Ellas ya dieron el paso.<br /><em>¿Y tú?</em>
+      </h2>
+      <p class="section-sub" style="max-width:440px; margin:0 auto;">
+        Mujeres reales con vidas reales que decidieron invertir en sí mismas.
+      </p>
+    </div>
+
+    <div class="test-grid">
+      {items.map((t) => (
+        <div class="test-card">
+          <div class="test-quote-mark">"</div>
+          <p class="test-text">{t.text}</p>
+          <div class="test-result">
+            <span>🏆 {t.result}</span>
+          </div>
+          <div class="test-footer">
+            <div class="test-avatar" style={`background: ${t.color}`}>{t.initial}</div>
+            <div class="test-info">
+              <strong>{t.name}</strong>
+              <span>{t.age} · {t.city}</span>
+            </div>
+            <div class="test-stars">★★★★★</div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="test-cta">
+      <p class="test-cta-txt">¿Lista para escribir tu propio testimonio?</p>
+      <a
+        href="https://wa.me/56972586313?text=Hola%20Cami!%20Le%C3%AD%20los%20testimonios%20y%20quiero%20ser%20el%20pr%C3%B3ximo%20%F0%9F%92%AA"
+        target="_blank"
+        class="btn-orange"
+      >
+        Quiero mi transformación
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .test-sec { background: var(--color-cream); padding: 96px 28px; }
+  .test-wrap { max-width: 1100px; margin: 0 auto; }
+  .test-header { text-align: center; margin-bottom: 64px; }
+
+  .test-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 20px; margin-bottom: 60px;
+  }
+  .test-card {
+    background: #fff;
+    border: 1px solid var(--color-beige-border);
+    border-radius: 24px; padding: 30px 26px;
+    display: flex; flex-direction: column; gap: 14px;
+    position: relative; overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .test-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 36px rgba(92,61,42,0.09);
+  }
+  .test-quote-mark {
+    font-family: var(--font-serif); font-size: 5rem; line-height: 1;
+    color: rgba(232,112,58,0.10); position: absolute; top: 8px; right: 18px;
+    font-weight: 700; pointer-events: none;
+  }
+  .test-text {
+    font-size: 0.875rem; color: var(--color-brown-light);
+    line-height: 1.75; flex: 1; font-style: italic;
+    position: relative; z-index: 1;
+  }
+  .test-result {
+    background: linear-gradient(135deg, rgba(232,112,58,0.07), rgba(232,112,58,0.03));
+    border: 1px solid rgba(232,112,58,0.14);
+    border-radius: 10px; padding: 9px 14px;
+    font-size: 0.78rem; font-weight: 700; color: var(--color-orange-dark);
+  }
+  .test-footer {
+    display: flex; align-items: center; gap: 12px;
+    padding-top: 14px; border-top: 1px solid var(--color-beige-dark);
+  }
+  .test-avatar {
+    width: 38px; height: 38px; border-radius: 50%; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    color: #fff; font-weight: 700; font-size: 1rem;
+  }
+  .test-info { flex: 1; }
+  .test-info strong { display: block; font-size: 0.85rem; color: var(--color-ink-deep); }
+  .test-info span { font-size: 0.75rem; color: var(--color-muted); }
+  .test-stars { color: #F5A31A; font-size: 0.8rem; }
+
+  .test-cta {
+    text-align: center; display: flex;
+    flex-direction: column; align-items: center; gap: 20px;
+  }
+  .test-cta-txt {
+    font-family: var(--font-serif); font-style: italic;
+    font-size: 1.1rem; color: var(--color-brown-light);
+  }
+
+  @media (max-width: 768px) { .test-grid { grid-template-columns: 1fr; } }
+  @media (min-width: 769px) and (max-width: 1024px) { .test-grid { grid-template-columns: repeat(2, 1fr); } }
+</style>

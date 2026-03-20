@@ -1,0 +1,120 @@
+---
+---
+<nav class="nav" id="mainNav">
+  <div class="nav-inner">
+    <a href="#inicio" class="nav-logo-link">
+      <img src="/logo.png" alt="Cami Aguayo · Fitness For Women · Nutricionista Santo Domingo Chile" class="nav-logo" width="88" height="88" />
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#como-funciona">Cómo funciona</a></li>
+      <li><a href="#testimonios">Testimonios</a></li>
+      <li><a href="#sobre-mi">Sobre mí</a></li>
+    </ul>
+
+    <a
+      href="https://wa.me/56972586313?text=Hola%20Cami!%20Vi%20tu%20p%C3%A1gina%20y%20quiero%20saber%20m%C3%A1s%20%F0%9F%92%AA"
+      target="_blank"
+      class="nav-cta"
+    >
+      Quiero empezar
+    </a>
+
+    <button class="nav-burger" id="burgerBtn" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div class="nav-mobile" id="mobileMenu">
+    <ul>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#como-funciona">Cómo funciona</a></li>
+      <li><a href="#testimonios">Testimonios</a></li>
+      <li><a href="#sobre-mi">Sobre mí</a></li>
+      <li>
+        <a
+          href="https://wa.me/56972586313?text=Hola%20Cami!"
+          target="_blank"
+          class="nav-mobile-cta"
+        >Quiero empezar</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<style>
+  .nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(253, 249, 244, 0.96);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(232, 213, 192, 0.4);
+    transition: box-shadow 0.3s;
+  }
+  .nav.scrolled {
+    box-shadow: 0 1px 20px rgba(60, 30, 10, 0.07);
+  }
+  .nav-inner {
+    max-width: 1200px; margin: 0 auto;
+    padding: 0 28px; height: 92px;
+    display: flex; align-items: center; justify-content: space-between; gap: 32px;
+  }
+  .nav-logo-link { flex-shrink: 0; }
+  .nav-logo { height: 88px; width: auto; }
+  .nav-links {
+    display: flex; list-style: none; gap: 36px; flex: 1; justify-content: center;
+  }
+  .nav-links a {
+    font-size: 0.875rem; font-weight: 500; letter-spacing: 0.01em;
+    color: var(--color-brown); transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--color-orange); }
+  .nav-cta {
+    flex-shrink: 0;
+    background: var(--color-orange); color: #fff;
+    padding: 10px 24px; border-radius: 999px;
+    font-size: 0.875rem; font-weight: 600; letter-spacing: 0.01em;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .nav-cta:hover { background: var(--color-orange-dark); transform: translateY(-1px); }
+  .nav-burger {
+    display: none; flex-direction: column; gap: 5px;
+    background: none; border: none; cursor: pointer; padding: 4px;
+  }
+  .nav-burger span {
+    display: block; width: 22px; height: 2px;
+    background: var(--color-orange); border-radius: 2px; transition: 0.3s;
+  }
+  .nav-mobile {
+    display: none;
+    background: var(--color-cream);
+    border-top: 1px solid var(--color-beige-dark);
+    padding: 12px 28px 24px;
+  }
+  .nav-mobile.open { display: block; }
+  .nav-mobile ul { list-style: none; }
+  .nav-mobile li {
+    padding: 13px 0;
+    border-bottom: 1px solid var(--color-beige-dark);
+  }
+  .nav-mobile li:last-child { border-bottom: none; padding-top: 18px; }
+  .nav-mobile a { font-size: 0.95rem; font-weight: 500; color: var(--color-ink); }
+  .nav-mobile-cta {
+    display: block; text-align: center;
+    background: var(--color-orange); color: #fff !important;
+    padding: 13px; border-radius: 999px; font-weight: 700;
+  }
+  @media (max-width: 768px) {
+    .nav-links, .nav-cta { display: none; }
+    .nav-burger { display: flex; }
+  }
+</style>
+
+<script>
+  const burger = document.getElementById('burgerBtn');
+  const menu   = document.getElementById('mobileMenu');
+  const nav    = document.getElementById('mainNav');
+  burger?.addEventListener('click', () => menu?.classList.toggle('open'));
+  menu?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.remove('open')));
+  window.addEventListener('scroll', () => nav?.classList.toggle('scrolled', window.scrollY > 24));
+</script>

@@ -1,0 +1,163 @@
+---
+import '../styles/global.css';
+interface Props {
+  title?: string;
+  description?: string;
+  canonical?: string;
+}
+const {
+  title       = "Nutricionista en Santo Domingo Chile | Camila Aguayo · Fitness For Women",
+  description = "Camila Aguayo, nutricionista y coach fitness para mujeres en Santo Domingo y San Antonio, Chile. Planes 100% personalizados, acompañamiento real y resultados que se mantienen. ¡Agenda hoy!",
+  canonical   = "https://camiaguayo.cl"
+} = Astro.props;
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["LocalBusiness", "HealthAndBeautyBusiness"],
+      "@id": "https://camiaguayo.cl/#business",
+      "name": "Cami Aguayo · Fitness For Women",
+      "description": "Nutricionista y coach fitness especializada en mujeres de Santo Domingo, San Antonio y toda Chile. Planes nutricionales personalizados, entrenamiento y coaching de hábitos.",
+      "url": "https://camiaguayo.cl",
+      "telephone": "+56972586313",
+      "image": "https://camiaguayo.cl/logo.png",
+      "logo": "https://camiaguayo.cl/logo.png",
+      "priceRange": "$$",
+      "currenciesAccepted": "CLP",
+      "paymentAccepted": "Transferencia, efectivo",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "El Convento",
+        "addressLocality": "Santo Domingo",
+        "addressRegion": "Región de Valparaíso",
+        "postalCode": "2990000",
+        "addressCountry": "CL"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.638,
+        "longitude": -71.616
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Santo Domingo" },
+        { "@type": "City", "name": "San Antonio" },
+        { "@type": "City", "name": "Melipilla" },
+        { "@type": "City", "name": "Cartagena" },
+        { "@type": "AdministrativeArea", "name": "Región de Valparaíso" },
+        { "@type": "Country", "name": "Chile" }
+      ],
+      "sameAs": [
+        "https://www.instagram.com/camiaguayofit"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+56972586313",
+        "contactType": "customer service",
+        "contactOption": "TollFree",
+        "areaServed": "CL",
+        "availableLanguage": "Spanish"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Programas de Nutrición y Fitness Femenino",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Plan Nutricional Personalizado",
+              "description": "Plan de alimentación diseñado para tu cuerpo, horarios y metas. Incluye seguimiento mensual."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Programa 3 en 1",
+              "description": "Nutrición + Entrenamiento + Coaching de hábitos. Transformación integral con acompañamiento semanal."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Asesoría Fitness",
+              "description": "Rutinas de entrenamiento personalizadas para casa o gym, con progresión y ajuste mensual."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://camiaguayo.cl/#persona",
+      "name": "Camila Aguayo",
+      "jobTitle": "Nutricionista y Coach Fitness",
+      "worksFor": { "@id": "https://camiaguayo.cl/#business" },
+      "url": "https://camiaguayo.cl",
+      "sameAs": ["https://www.instagram.com/camiaguayofit"],
+      "knowsAbout": ["Nutrición", "Fitness femenino", "Coaching de hábitos", "Transformación corporal", "Alimentación saludable"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://camiaguayo.cl/#website",
+      "url": "https://camiaguayo.cl",
+      "name": "Cami Aguayo · Fitness For Women",
+      "description": "Nutricionista y coach fitness para mujeres en Santo Domingo, Chile",
+      "inLanguage": "es-CL",
+      "publisher": { "@id": "https://camiaguayo.cl/#business" }
+    }
+  ]
+};
+---
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO principal -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content="nutricionista Santo Domingo Chile, nutricionista San Antonio Chile, asesoría fitness mujeres Chile, nutricionista online Chile, coach fitness femenino Chile, plan nutricional personalizado, Camila Aguayo nutricionista, Fitness For Women Chile" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="author" content="Camila Aguayo · Fitness For Women" />
+    <link rel="canonical" href={canonical} />
+
+    <!-- Open Graph -->
+    <meta property="og:type"        content="website" />
+    <meta property="og:url"         content={canonical} />
+    <meta property="og:title"       content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image"       content="https://camiaguayo.cl/logo.png" />
+    <meta property="og:locale"      content="es_CL" />
+    <meta property="og:site_name"   content="Cami Aguayo · Fitness For Women" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card"        content="summary_large_image" />
+    <meta name="twitter:title"       content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image"       content="https://camiaguayo.cl/logo.png" />
+
+    <!-- Geo (SEO local) -->
+    <meta name="geo.region"      content="CL-VS" />
+    <meta name="geo.placename"   content="Santo Domingo, Región de Valparaíso, Chile" />
+    <meta name="geo.position"    content="-33.638;-71.616" />
+    <meta name="ICBM"            content="-33.638, -71.616" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/logo.png" />
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

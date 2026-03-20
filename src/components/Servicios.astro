@@ -1,0 +1,203 @@
+---
+---
+<section class="srv" id="servicios">
+  <div class="srv-wrap">
+
+    <div class="srv-header">
+      <span class="section-label">Mis programas</span>
+      <h2 class="section-title">
+        Elige el camino que<br /><em>se adapta a tu vida.</em>
+      </h2>
+      <p class="section-sub" style="max-width:480px; margin:0 auto;">
+        Todos los programas incluyen acompañamiento real. No eres un número en mi lista.
+      </p>
+    </div>
+
+    <div class="srv-grid">
+
+      <!-- Card 1 -->
+      <div class="srv-card">
+        <div class="srv-card-top srv-top-1">
+          <span class="srv-ico">🥗</span>
+          <span class="srv-badge">Nutrición</span>
+        </div>
+        <div class="srv-body">
+          <h3>Plan Nutricional Personalizado</h3>
+          <p>Un plan diseñado para tu cuerpo, tus horarios y tus metas. No plantillas — nutrición hecha para ti.</p>
+          <ul class="srv-features">
+            <li>Evaluación inicial completa</li>
+            <li>Plan de alimentación semanal</li>
+            <li>Lista de compras incluida</li>
+            <li>Recetas fáciles y ricas</li>
+            <li>Seguimiento mensual</li>
+          </ul>
+          <a
+            href="https://wa.me/56972586313?text=Hola%20Cami!%20Me%20interesa%20el%20Plan%20Nutricional%20%F0%9F%8C%BF"
+            target="_blank"
+            class="srv-btn"
+          >Quiero este plan</a>
+        </div>
+      </div>
+
+      <!-- Card 2 — Featured -->
+      <div class="srv-card srv-featured">
+        <div class="srv-badge-top">Más completo</div>
+        <div class="srv-card-top srv-top-2">
+          <span class="srv-ico">⚡</span>
+          <span class="srv-badge srv-badge-white">Transformación total</span>
+        </div>
+        <div class="srv-body">
+          <h3>Programa 3 en 1</h3>
+          <p>El paquete completo: nutrición + entrenamiento + coaching mental. El método que realmente transforma.</p>
+          <ul class="srv-features">
+            <li>Todo el plan nutricional</li>
+            <li>Rutinas para casa o gym</li>
+            <li>Coaching de hábitos y mindset</li>
+            <li>Acompañamiento por WhatsApp</li>
+            <li>Revisión semanal de avances</li>
+            <li>Acceso a comunidad privada</li>
+          </ul>
+          <a
+            href="https://wa.me/56972586313?text=Hola%20Cami!%20Me%20interesa%20el%20Programa%203%20en%201%20%F0%9F%92%AA"
+            target="_blank"
+            class="srv-btn srv-btn-white"
+          >Quiero transformarme</a>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="srv-card">
+        <div class="srv-card-top srv-top-3">
+          <span class="srv-ico">💪</span>
+          <span class="srv-badge">Fitness</span>
+        </div>
+        <div class="srv-body">
+          <h3>Asesoría Fitness</h3>
+          <p>Si ya controlas tu alimentación y quieres llevar el entrenamiento al siguiente nivel con guía profesional.</p>
+          <ul class="srv-features">
+            <li>Evaluación física inicial</li>
+            <li>Rutinas personalizadas</li>
+            <li>Progresión de ejercicios</li>
+            <li>Videos explicativos</li>
+            <li>Ajuste mensual</li>
+          </ul>
+          <a
+            href="https://wa.me/56972586313?text=Hola%20Cami!%20Me%20interesa%20la%20Asesor%C3%ADa%20Fitness%20%F0%9F%8F%8B%EF%B8%8F%E2%80%8D%E2%99%80%EF%B8%8F"
+            target="_blank"
+            class="srv-btn"
+          >Quiero este plan</a>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="srv-note">
+      ¿No sabes cuál elegir?
+      <a href="https://wa.me/56972586313?text=Hola%20Cami!%20No%20s%C3%A9%20qu%C3%A9%20programa%20es%20para%20m%C3%AD" target="_blank">
+        Escríbeme y te oriento sin compromiso.
+      </a>
+    </p>
+
+  </div>
+</section>
+
+<style>
+  .srv { background: var(--color-cream); padding: 96px 28px; }
+  .srv-wrap { max-width: 1100px; margin: 0 auto; }
+  .srv-header { text-align: center; margin-bottom: 64px; }
+
+  .srv-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 20px; margin-bottom: 36px; align-items: stretch;
+  }
+  .srv-card {
+    background: #fff;
+    border: 1px solid var(--color-beige-border);
+    border-radius: 28px; overflow: hidden;
+    display: flex; flex-direction: column;
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+  }
+  .srv-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 44px rgba(92,61,42,0.11);
+  }
+  .srv-featured {
+    border: 2px solid var(--color-orange);
+    box-shadow: 0 10px 32px rgba(232,112,58,0.12);
+    transform: scaleY(1.01);
+  }
+  .srv-featured:hover { transform: scaleY(1.01) translateY(-5px); }
+  .srv-badge-top {
+    position: absolute; top: 16px; left: 50%; transform: translateX(-50%);
+    background: var(--color-orange); color: #fff;
+    font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.1em; padding: 4px 14px; border-radius: 99px;
+    z-index: 2;
+  }
+  .srv-card-top {
+    padding: 28px 24px 20px;
+    display: flex; justify-content: space-between; align-items: flex-end;
+  }
+  .srv-top-1 { background: linear-gradient(135deg, #FFF0E8, #FDE8D8); }
+  .srv-top-2 { background: linear-gradient(135deg, var(--color-orange), var(--color-orange-dark)); }
+  .srv-top-3 { background: linear-gradient(135deg, #F2EBE2, #EAE0D3); }
+  .srv-ico { font-size: 1.8rem; }
+  .srv-badge {
+    font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.08em;
+    background: rgba(232,112,58,0.12); color: var(--color-orange-dark);
+    border: 1px solid rgba(232,112,58,0.2);
+    padding: 4px 12px; border-radius: 99px;
+  }
+  .srv-badge-white {
+    background: rgba(255,255,255,0.2); color: #fff;
+    border-color: rgba(255,255,255,0.3);
+  }
+  .srv-body {
+    padding: 24px; flex: 1;
+    display: flex; flex-direction: column;
+  }
+  .srv-body h3 {
+    font-size: 1.05rem; font-weight: 700;
+    color: var(--color-ink-deep); margin-bottom: 10px;
+  }
+  .srv-body > p {
+    font-size: 0.875rem; color: var(--color-brown-light);
+    line-height: 1.65; margin-bottom: 20px;
+  }
+  .srv-features {
+    list-style: none; margin-bottom: 24px; flex: 1;
+  }
+  .srv-features li {
+    font-size: 0.85rem; color: var(--color-ink);
+    padding: 7px 0; border-bottom: 1px solid var(--color-beige-dark);
+    display: flex; align-items: center; gap: 10px;
+  }
+  .srv-features li::before {
+    content: '✓';
+    color: var(--color-orange); font-weight: 700; font-size: 0.75rem;
+    flex-shrink: 0;
+  }
+  .srv-features li:last-child { border-bottom: none; }
+  .srv-btn {
+    display: block; text-align: center;
+    background: var(--color-orange); color: #fff;
+    padding: 13px 20px; border-radius: 999px;
+    font-weight: 700; font-size: 0.875rem;
+    transition: background 0.2s, transform 0.15s;
+    margin-top: auto;
+  }
+  .srv-btn:hover { background: var(--color-orange-dark); transform: translateY(-1px); }
+  .srv-btn-white { background: #fff; color: var(--color-orange-dark) !important; }
+  .srv-btn-white:hover { background: var(--color-beige); }
+
+  .srv-note { text-align: center; font-size: 0.9rem; color: var(--color-brown-light); }
+  .srv-note a { color: var(--color-orange); font-weight: 600; }
+
+  @media (max-width: 900px) {
+    .srv-grid { grid-template-columns: 1fr; }
+    .srv-featured { transform: none; }
+    .srv-featured:hover { transform: translateY(-5px); }
+  }
+</style>
