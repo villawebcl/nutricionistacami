@@ -7,7 +7,7 @@ interface Props {
 }
 const {
   title       = "Nutricionista en Santo Domingo Chile | Camila Aguayo · Fitness For Women",
-  description = "Camila Aguayo, nutricionista y coach fitness para mujeres en Santo Domingo y San Antonio, Chile. Planes 100% personalizados, acompañamiento real y resultados que se mantienen. ¡Agenda hoy!",
+  description = "Camila Aguayo, nutricionista y coach en fitness para mujeres en Santo Domingo y San Antonio, Chile. Planes 100% personalizados, acompañamiento real y resultados que se mantienen. ¡Agenda hoy!",
   canonical   = "https://camiaguayo.cl"
 } = Astro.props;
 
@@ -18,7 +18,7 @@ const schema = {
       "@type": ["LocalBusiness", "HealthAndBeautyBusiness"],
       "@id": "https://camiaguayo.cl/#business",
       "name": "Cami Aguayo · Fitness For Women",
-      "description": "Nutricionista y coach fitness especializada en mujeres de Santo Domingo, San Antonio y toda Chile. Planes nutricionales personalizados, entrenamiento y coaching de hábitos.",
+      "description": "Nutricionista y coach en fitness especializada en mujeres de Santo Domingo, San Antonio y toda Chile. Planes nutricionales personalizados, entrenamiento y coaching de hábitos.",
       "url": "https://camiaguayo.cl",
       "telephone": "+56972586313",
       "image": "https://camiaguayo.cl/logo.png",
@@ -93,7 +93,7 @@ const schema = {
       "@type": "Person",
       "@id": "https://camiaguayo.cl/#persona",
       "name": "Camila Aguayo",
-      "jobTitle": "Nutricionista y Coach Fitness",
+      "jobTitle": "Nutricionista y coach en fitness",
       "worksFor": { "@id": "https://camiaguayo.cl/#business" },
       "url": "https://camiaguayo.cl",
       "sameAs": ["https://www.instagram.com/camiaguayofit"],
@@ -104,7 +104,7 @@ const schema = {
       "@id": "https://camiaguayo.cl/#website",
       "url": "https://camiaguayo.cl",
       "name": "Cami Aguayo · Fitness For Women",
-      "description": "Nutricionista y coach fitness para mujeres en Santo Domingo, Chile",
+      "description": "Nutricionista y coach en fitness para mujeres en Santo Domingo, Chile",
       "inLanguage": "es-CL",
       "publisher": { "@id": "https://camiaguayo.cl/#business" }
     }
@@ -120,7 +120,7 @@ const schema = {
     <!-- SEO principal -->
     <title>{title}</title>
     <meta name="description" content={description} />
-    <meta name="keywords" content="nutricionista Santo Domingo Chile, nutricionista San Antonio Chile, asesoría fitness mujeres Chile, nutricionista online Chile, coach fitness femenino Chile, plan nutricional personalizado, Camila Aguayo nutricionista, Fitness For Women Chile" />
+    <meta name="keywords" content="nutricionista Santo Domingo Chile, nutricionista San Antonio Chile, asesoría fitness mujeres Chile, nutricionista online Chile, coach en fitness para mujeres Chile, plan nutricional personalizado, Camila Aguayo nutricionista, Fitness For Women Chile" />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <meta name="author" content="Camila Aguayo · Fitness For Women" />
     <link rel="canonical" href={canonical} />

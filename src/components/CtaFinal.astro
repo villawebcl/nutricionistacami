@@ -72,8 +72,8 @@
   .cta-main-btn {
     display: inline-flex; align-items: center; gap: 12px;
     background: var(--color-orange); color: #fff;
-    padding: 18px 44px; border-radius: 999px;
-    font-weight: 700; font-size: 1.05rem;
+    padding: 14px 32px; border-radius: 999px;
+    font-weight: 700; font-size: 0.95rem;
     box-shadow: 0 10px 32px rgba(232,112,58,0.35);
     transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
   }
@@ -85,4 +85,12 @@
   .cta-contact { font-size: 0.82rem; color: rgba(250,246,241,0.45); }
   .cta-trust { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; }
   .cta-trust span { font-size: 0.82rem; color: rgba(250,246,241,0.5); font-weight: 500; }
+
+  @media (max-width: 768px) {
+    .cta-main-btn {
+      padding: 14px 28px;
+      font-size: 0.92rem;
+      gap: 10px;
+    }
+  }
 </style>

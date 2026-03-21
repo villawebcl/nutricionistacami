@@ -14,7 +14,7 @@
         itemprop="image"
       />
       <p itemprop="description">
-        Nutricionista &amp; Coach Fitness especializada en mujeres.<br/>
+        Nutricionista &amp; coach en fitness especializada en mujeres.<br/>
         <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
           <span itemprop="streetAddress">El Convento</span>,
           <span itemprop="addressLocality">Santo Domingo</span>,
@@ -59,7 +59,11 @@
   </div>
 
   <div class="footer-bottom">
-    <p>© 2025 Cami Aguayo · Fitness For Women · Todos los derechos reservados</p>
+    <p>© 2026 Cami Aguayo · Fitness For Women · Todos los derechos reservados</p>
+    <p class="footer-credit">
+      Diseño y desarrollo web por
+      <a href="https://villaweb.cl" target="_blank" rel="noopener noreferrer">VillaWeb</a>
+    </p>
     <p class="footer-seo">Nutricionista en Santo Domingo Chile · Asesoría fitness mujeres Chile · Nutricionista online Chile</p>
   </div>
 </footer>
@@ -82,12 +86,19 @@
   }
   .footer-inner {
     max-width: 1100px; margin: 0 auto;
-    display: grid; grid-template-columns: 2fr 1fr 1.4fr;
-    gap: 48px; padding-bottom: 48px;
+    display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(180px, 0.8fr) minmax(220px, 1fr);
+    gap: 56px; padding-bottom: 48px;
+    align-items: start;
     border-bottom: 1px solid rgba(255,255,255,0.07);
   }
-  .footer-logo { width: 200px; margin-bottom: 14px; }
-  .footer-brand p { font-size: 0.82rem; color: rgba(250,246,241,0.45); line-height: 1.7; }
+  .footer-brand {
+    max-width: 420px;
+  }
+  .footer-logo { width: 260px; margin-bottom: 18px; }
+  .footer-brand p {
+    max-width: 360px;
+    font-size: 0.82rem; color: rgba(250,246,241,0.45); line-height: 1.7;
+  }
   .footer-nav h4, .footer-contact h4 {
     font-size: 0.68rem; font-weight: 700; text-transform: uppercase;
     letter-spacing: 0.14em; color: var(--color-orange-light);
@@ -102,10 +113,22 @@
   .footer-loc { font-size: 0.82rem; color: rgba(250,246,241,0.4); display: flex; align-items: center; gap: 8px; }
   .footer-bottom {
     max-width: 1100px; margin: 0 auto;
-    padding: 22px 0; text-align: center;
+    padding: 22px 0 26px; text-align: center;
     display: flex; flex-direction: column; gap: 4px;
   }
   .footer-bottom p { font-size: 0.78rem; color: rgba(250,246,241,0.28); }
+  .footer-credit {
+    font-size: 0.74rem;
+    color: rgba(250,246,241,0.34);
+  }
+  .footer-credit a {
+    color: rgba(250,246,241,0.52);
+    transition: color 0.2s ease, opacity 0.2s ease;
+  }
+  .footer-credit a:hover {
+    color: var(--color-orange-light);
+    opacity: 0.9;
+  }
   .footer-seo { font-size: 0.68rem !important; }
 
   /* Floating button */
@@ -135,6 +158,16 @@
 
   @media (max-width: 768px) {
     .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+    .footer-brand { text-align: center; }
+    .footer-logo {
+      width: 260px;
+      max-width: 100%;
+      margin: 0 auto 18px;
+      display: block;
+    }
+    .footer-brand p { margin-left: auto; margin-right: auto; }
+    .footer-nav, .footer-contact { text-align: center; }
+    .footer-nav ul, .footer-contact ul { align-items: center; }
     .wa-float { bottom: 16px; right: 16px; width: 50px; height: 50px; }
   }
 </style>
